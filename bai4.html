@@ -1,380 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Information Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
-        
-        .form-container {
-            background-color: white;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .section {
-            margin-bottom: 20px;
-        }
-        
-        .section-title {
-            background-color: #e6f3ff;
-            padding: 8px 12px;
-            margin-bottom: 15px;
-            font-weight: bold;
-            border-left: 4px solid #0066cc;
-        }
-        
-        .form-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .form-label {
-            width: 120px;
-            flex-shrink: 0;
-            font-weight: normal;
-        }
-        
-        .form-input {
-            flex: 1;
-            padding: 4px 8px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: #0066cc;
-        }
-        
-        .radio-group {
-            display: flex;
-            gap: 15px;
-            flex: 1;
-        }
-        
-        .radio-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .checkbox-group {
-            display: flex;
-            gap: 15px;
-            flex: 1;
-        }
-        
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        select {
-            padding: 4px 8px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-        }
-        
-        .notes-area {
-            width: 100%;
-            height: 80px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            resize: vertical;
-            font-family: Arial, sans-serif;
-        }
-        
-        .toolbar {
-            border: 1px solid #ccc;
-            padding: 5px;
-            margin-bottom: 5px;
-            background-color: #f9f9f9;
-        }
-        
-        .toolbar button {
-            background: none;
-            border: none;
-            padding: 2px 5px;
-            margin: 0 2px;
-            cursor: pointer;
-            font-size: 12px;
-        }
-        
-        .toolbar button:hover {
-            background-color: #e0e0e0;
-        }
-        
-        .captcha-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .captcha-code {
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            letter-spacing: 3px;
-            color: #666;
-            text-decoration: line-through;
-        }
-        
-        .captcha-input {
-            width: 100px;
-            padding: 4px 8px;
-            border: 1px solid #ccc;
-        }
-        
-        .button-group {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            padding: 8px 20px;
-            margin: 0 5px;
-            border: none;
-            cursor: pointer;
-            font-size: 14px;
-        }
-        
-        .btn-submit {
-            background-color: #666;
-            color: white;
-        }
-        
-        .btn-cancel {
-            background-color: #999;
-            color: white;
-        }
-        
-        .btn:hover {
-            opacity: 0.8;
-        }
-        
-        .required-note {
-            font-size: 12px;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Information Form</title>
 </head>
 <body>
-    <div class="form-container">
-        <form id="employeeForm">
-            <div class="section">
-                <div class="section-title">Basic Info</div>
-                
-                <div class="form-row">
-                    <label class="form-label">Employee ID</label>
-                    <input type="text" class="form-input" value="9" readonly style = "border: None">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-input" value="Dodsworth" readonly style = "border: None">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="form-input" value="Anne">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Gender</label>
-                    <div class="radio-group">
-                        <div class="radio-item">
-                            <input type="radio" name="gender" value="male" id="male">
-                            <label for="male">Male</label>
-                        </div>
-                        <div class="radio-item">
-                            <input type="radio" name="gender" value="female" id="female" checked>
-                            <label for="female">Female</label>
-                        </div>
-                        <div class="radio-item">
-                            <input type="radio" name="gender" value="other" id="other">
-                            <label for="other">Other</label>
-                        </div>
-                        <div class="radio-item">
-                            <input type="radio" name="gender" value="zzz" id="zzz">
-                            <label for="zzz">ZZZ</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Title</label>
-                    <input type="text" class="form-input" value="Sales Representative">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Suffix</label>
-                    <input type="text" class="form-input" value="Ms.">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">BirthDate</label>
-                    <input type="text" class="form-input" value="1969-07-02 00:00:00">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">HireDate</label>
-                    <input type="text" class="form-input" value="1994-11-15 00:00:00">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">SSN (if applicable)</label>
-                    <input type="text" class="form-input">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Reports To</label>
-                    <select class="form-input">
-                        <option value="">Select...</option>
-                        <option value="buchanan" selected>Buchanan</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-            
-            
-            <div class="section">
-                <div class="section-title">Contact Info</div>
-                
-                <div class="form-row">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" value="name@example.com">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Address</label>
-                    <input type="text" class="form-input" value="7 Houndstooth Rd.">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">City</label>
-                    <input type="text" class="form-input" value="London">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Region</label>
-                    <input type="text" class="form-input">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Postal Code</label>
-                    <input type="text" class="form-input" value="WG2 7LT">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Country</label>
-                    <select class="form-input">
-                        <option value="">Select...</option>
-                        <option value="russian-federation" selected>Russian Federation</option>
-                        <option value="uk">United Kingdom</option>
-                        <option value="us">United States</option>
-                    </select>
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">US Home Phone</label>
-                    <input type="tel" class="form-input" value="(206)234-2562">
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Photo</label>
-                    <input type="text" class="form-input" value="EmpID9.bmp">
-                </div>
-            </div>
-            
-            <div class="section">
-                <div class="section-title">Optional Info</div>
-                
-                <div class="form-row">
-                    <label class="form-label">Notes</label>
-                    <div style="flex: 1;">
-                        <div class="toolbar">
-                            <button type="button" title="Bold"><b>B</b></button>
-                            <button type="button" title="Italic"><i>I</i></button>
-                            <button type="button" title="Italic"><i>S</i></button>
-                            <button type="button" title="Underline"><u>U</u></button>
-                            <button type="button">≡</button>
-                        
-                        </div>
-                        <textarea class="notes-area" placeholder="Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German. ZZZ"></textarea>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Preferred Shift</label>
-                    <div class="radio-group">
-                        <div class="radio-item">
-                            <input type="radio" name="shift" value="regular" id="regular">
-                            <label for="regular">Regular</label>
-                        </div>
-                        <div class="radio-item">
-                            <input type="radio" name="shift" value="graveyard" id="graveyard" checked>
-                            <label for="graveyard">Graveyard</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Active?</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="active" checked>
-                            <label for="active">✓</label>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <label class="form-label">Are you human?</label>
-                    <div style="flex: 1;">
-                        <div class="captcha-container">
-                            <span class="captcha-code">I1DA4C</span>
-                            <input type="text" class="captcha-input" placeholder="Enter code">
-                            <button type="button" style="background: none; border: none; color: #0066cc; cursor: pointer;">Click to change</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="button-group">
-                <button type="submit" class="btn btn-submit">Submit</button>
-                <button type="button" class="btn btn-cancel">Cancel</button>
-            </div>
-            
-            <div class="required-note">
-                * = required
-            </div>
-        </form>
-    </div>
+  <h2>Basic Info</h2>
+  <hr>
+  <form id="employeeForm">
+    <p>
+      <label>Employee ID: <input type="text" value="9" readonly style = "border : None "/></label>
+    </p>
+    <p>
+      <label>Last Name: <input type="text" value="Dodsworth" readonly style = "border : None "/></label>
+    </p>
+    <p>
+      <label>First Name: <input type="text" value="Anne" /></label>
+    </p>
+    <p>
+      Gender:
+      <label><input type="radio" name="gender" value="male" /> Male</label>
+      <label><input type="radio" name="gender" value="female" checked /> Female</label>
+      <label><input type="radio" name="gender" value="other" /> Other</label>
+      <label><input type="radio" name="gender" value="zzz" /> ZZZ</label>
+    </p>
+    <p>
+      <label>Title: <input type="text" value="Sales Representative" /></label>
+    </p>
+    <p>
+      <label>Suffix: <input type="text" value="Ms." /></label>
+    </p>
+    <p>
+      <label>BirthDate: <input type="text" value="1969-07-02 00:00:00" /></label>
+    </p>
+    <p>
+      <label>HireDate: <input type="text" value="1994-11-15 00:00:00" /></label>
+    </p>
+    <p>
+      <label>SSN (if applicable): <input type="text" /></label>
+    </p>
+    <p>
+      <label>Reports To:
+        <select>
+          <option value="">Select...</option>
+          <option value="buchanan" selected>Buchanan</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+    </p>
 
-    <script>
-        document.getElementById('employeeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submitted successfully!');
-        });
-        
-        document.querySelector('.captcha-container button').addEventListener('click', function() {
-            const codes = ['I1DA4C', 'XY7Z9P', 'K3M8NQ', 'R5T2WE', 'B6V4CF'];
-            const randomCode = codes[Math.floor(Math.random() * codes.length)];
-            document.querySelector('.captcha-code').textContent = randomCode;
-        });
-    </script>
+    <h2>Contact Info</h2>
+    <hr>
+    <p>
+      <label>Email: <input type="email" value="name@example.com" /></label>
+    </p>
+    <p>
+      <label>Address: <input type="text" value="7 Houndstooth Rd." /></label>
+    </p>
+    <p>
+      <label>City: <input type="text" value="London" /></label>
+    </p>
+    <p>
+      <label>Region: <input type="text" /></label>
+    </p>
+    <p>
+      <label>Postal Code: <input type="text" value="WG2 7LT" /></label>
+    </p>
+    <p>
+      <label>Country:
+        <select>
+          <option value="">Select...</option>
+          <option value="russian-federation" selected>Russian Federation</option>
+          <option value="uk">United Kingdom</option>
+          <option value="us">United States</option>
+        </select>
+      </label>
+    </p>
+    <p>
+      <label>US Home Phone: <input type="tel" value="(206)234-2562" /></label>
+    </p>
+    <p>
+      <label>Photo: <input type="text" value="EmpID9.bmp" /></label>
+    </p>
+
+    <h2>Optional Info</h2>
+    <hr>
+    <p>
+      <label>Notes:<br/>
+        <textarea rows="5" cols="50" placeholder="Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German. ZZZ"></textarea>
+      </label>
+    </p>
+    <p>
+      Preferred Shift:
+      <label><input type="radio" name="shift" value="regular" /> Regular</label>
+      <label><input type="radio" name="shift" value="graveyard" checked /> Graveyard</label>
+    </p>
+    <p>
+      <label><input type="checkbox" id="active" checked /> Active?</label>
+    </p>
+    <p>
+      Are you human? <br/>
+      <span id="captchaCode" style="font-family: monospace; text-decoration: line-through;">I1DA4C</span>
+      <input type="text" placeholder="Enter code" />
+      <button type="button" onclick="changeCaptcha()">Click to change</button>
+    </p>
+
+    <p>
+      <button type="submit">Submit</button>
+      <button type="button" onclick="clearForm()">Cancel</button>
+    </p>
+
+    <p>* = required</p>
+  </form>
 </body>
 </html>
