@@ -3,72 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài Thực Hành Chương 2</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        form {
-            margin-bottom: 40px;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-        }
-        input, textarea {
-            width: 300px;
-            padding: 5px;
-            margin-top: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        th, td {
-            border: 1px solid #aaa;
-            padding: 8px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .gender {
-            width: auto;
-        }
-    </style>
 </head>
 <body>
 
     <h2>Form Thêm Sinh Viên</h2>
-    <form>
         <label for="maSV">Mã sinh viên:</label>
         <input type="text" id="maSV" name="maSV" required>
 
+        <br>
+        <br>
         <label for="hoTen">Họ và tên:</label>
         <input type="text" id="hoTen" name="hoTen" required>
 
+        <br>
+        <br>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
 
+        <br>
+        <br>
         <label for="ngaySinh">Ngày sinh:</label>
         <input type="date" id="ngaySinh" name="ngaySinh">
 
+        <br>
+        <br>
         <label>Giới tính:</label>
         <input type="radio" id="nam" name="gioiTinh" value="Nam" class="gender">
         <label for="nam">Nam</label>
         <input type="radio" id="nu" name="gioiTinh" value="Nữ" class="gender">
         <label for="nu">Nữ</label>
 
+        <br>
+        <br>
         <label for="ghiChu">Ghi chú:</label>
         <textarea id="ghiChu" name="ghiChu" rows="4"></textarea>
 
-        <br><br>
+        <br>
+        <br>
         <button type="submit">Thêm sinh viên</button>
     </form>
-
     <h2>Danh Sách Sinh Viên</h2>
-    <table>
+    <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
                 <th>STT</th>
