@@ -3,47 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Bài Thực Hành Chương 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        /* Container căn giữa và nền form */
+        .form-container {
+            background-color: #f0f8ff;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: 250px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .gender {
+            margin-left: 10px;
+        }
+
+        textarea {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            resize: none;
+            margin-top: 5px;
+        }
+
+        label[for="ghiChu"] {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0 auto;
+            padding: 8px 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Giao diện bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #343a40;
+            color: white;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+            text-decoration: underline;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <h2>Form Thêm Sinh Viên</h2>
-        <label for="maSV">Mã sinh viên:</label>
-        <input type="text" id="maSV" name="maSV" required>
+    <div class="form-container">
+        <form>
+            <label for="maSV">Mã sinh viên:</label>
+            <input type="text" id="maSV" name="maSV" required><br>
 
-        <br>
-        <br>
-        <label for="hoTen">Họ và tên:</label>
-        <input type="text" id="hoTen" name="hoTen" required>
+            <label for="hoTen">Họ và tên:</label>
+            <input type="text" id="hoTen" name="hoTen" required><br>
 
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
 
-        <br>
-        <br>
-        <label for="ngaySinh">Ngày sinh:</label>
-        <input type="date" id="ngaySinh" name="ngaySinh">
+            <label for="ngaySinh">Ngày sinh:</label>
+            <input type="date" id="ngaySinh" name="ngaySinh"><br>
 
-        <br>
-        <br>
-        <label>Giới tính:</label>
-        <input type="radio" id="nam" name="gioiTinh" value="Nam" class="gender">
-        <label for="nam">Nam</label>
-        <input type="radio" id="nu" name="gioiTinh" value="Nữ" class="gender">
-        <label for="nu">Nữ</label>
+            <label>Giới tính:</label>
+            <input type="radio" id="nam" name="gioiTinh" value="Nam" class="gender">
+            <label for="nam">Nam</label>
+            <input type="radio" id="nu" name="gioiTinh" value="Nữ" class="gender">
+            <label for="nu">Nữ</label><br>
 
-        <br>
-        <br>
-        <label for="ghiChu">Ghi chú:</label>
-        <textarea id="ghiChu" name="ghiChu" rows="4"></textarea>
+            <label for="ghiChu">Ghi chú:</label>
+            <textarea id="ghiChu" name="ghiChu" rows="4"></textarea>
 
-        <br>
-        <br>
-        <button type="submit">Thêm sinh viên</button>
-    </form>
+            <button type="submit">Thêm sinh viên</button>
+        </form>
+    </div>
+
     <h2>Danh Sách Sinh Viên</h2>
-    <table border="1" cellpadding="5" cellspacing="0">
+    <table>
         <thead>
             <tr>
                 <th>STT</th>
@@ -85,5 +182,6 @@
             </tr>
         </tbody>
     </table>
+
 </body>
 </html>
