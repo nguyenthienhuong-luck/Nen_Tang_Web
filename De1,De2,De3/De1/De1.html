@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý Nhân viên</title>
+  <link rel="stylesheet" href="..\Thuvien\bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="..\Thuvien\jquery-3.7.1.min.js"></script>
+  <script src="..\Thuvien\jquery.validate.min.js"></script>
+  <script src="data.js"></script>
+  <script src="validate.js"></script>
+</head>
+<body>
+  <script src="..\Thuvien\bootstrap.bundle.min.js"></script>
+
+  <nav class="navbar navbar-light px-4 py-3" id="navbar">
+    <div class="container-fluid d-flex align-items-center">
+      <a class="navbar-brand me-4 text-white" href="#">TLU</a>
+      <ul class="nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-white" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Employees</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" />
+        <button class="btn btn-outline-light" type="button">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container_table_Dsnv">
+    <div class="d-flex justify-content-between align-items-center mb-1 p-3" style="background-color:#456882; border-radius: 5px">
+      <h2 class="text-white mb-0">Manage Employees</h2>
+      <div>
+        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">Add New Employee</button>
+      </div>
+    </div>
+
+    <div class="custom-table-wrapper">
+      <table id="box_ds_sinhvien">
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Nguyễn Thiên Hương</td>
+            <td>nth@example.com</td>
+            <td>Hà Nội</td>
+            <td>0123456789</td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm me-1">Sửa</button>
+              <button class="btn btn-outline-danger btn-sm">Xoá</button>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Nguyễn Sinh Cung</td>
+            <td>nsc@example.com</td>
+            <td>Huế</td>
+            <td>0987654321</td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm me-1">Sửa</button>
+              <button class="btn btn-outline-danger btn-sm">Xoá</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination-wrapper container mb-3">
+      <div>Showing 5 out of 25 entries</div>
+      <nav>
+        <ul class="pagination pagination-sm mb-0">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link active" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addEmployeeModalLabel">Add Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="addEmployeeForm">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" placeholder="Enter name" />
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" placeholder="Enter email" />
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Address</label>
+              <textarea class="form-control" name="address" placeholder="Enter address" rows="2"></textarea>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone</label>
+              <input type="text" class="form-control" name="phone" placeholder="Enter phone" />
+              <div class="invalid-feedback"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-success">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

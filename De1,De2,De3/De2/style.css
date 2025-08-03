@@ -1,0 +1,120 @@
+ body {
+    font-family: Arial, sans-serif;
+ }
+ .header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      }
+.header .nav {
+    display: flex;
+    gap: 15px;
+    margin-top:15px;
+    margin-right:5px;
+}
+.header .search-section {
+    display: flex;
+    gap: 10px;
+ }
+ .search-bar {
+   margin-top:15px;
+ }
+ .toolbar {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+.toolbar .left-buttons {
+     display: flex;
+    gap: 10px;
+ }
+  .toolbar .right-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+.toolbar input {
+    padding: 5px;
+}
+.toolbar select {
+    width: 100px;
+    padding: 5px;
+}
+.table-container {
+    width: 100%;
+    margin : 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.bang_ds {
+    width: 100%;
+    border-collapse: collapse;
+    text-align:center; 
+
+}
+th, td {
+    border-top: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #333;
+    color: white;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+.checkbox input {
+     margin-right: 5px;
+}
+.delete-btn {
+    background-color: #ff0000;
+    color: white;
+    margin-bottom:20px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+hr{
+    margin-top:4px;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color:#58A0C8;
+  color: white;
+  border: 1px solid#58A0C8;
+}
+        .footer {
+            background-color: #003087;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }

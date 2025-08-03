@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="..\Thuvien\bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="..\Thuvien\jquery-3.7.1.min.js"></script>
+  <script src="..\Thuvien\jquery.validate.min.js"></script>
+  <script src="data.js"></script>
+  <script src="validate.js"></script>
+  <link rel="stylesheet" href="..\Thuvien\fontawesome-free-7.0.0-web\css\all.min.css">
+</head>
+<body>
+  <script src="..\Thuvien\bootstrap.bundle.min.js"></script>
+  <div class="header">
+        <span>Trường Đại học Thủy Lợi</span>
+        <div class="search-section">
+        <div class="nav">
+            <p >Trang chủ</p>
+            <p >Cửa hàng</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Tìm kiếm giao dịch">
+            <button style="background-color: #000000; color:#93DA97; border: 2px solid #93DA97;">TIẾM KIỂM</button>
+        </div>
+        </div>
+    </div>
+  <div class="container">
+    <div class="toolbar">
+        <div class="left-buttons">
+            <button data-bs-toggle="modal" data-bs-target="#addTransactionModal" style="background-color:#78B9B5; border: none; color: white; padding: 10px 20px; border-radius: 5px;">
+    <i class="fa-solid fa-circle-plus"></i> THÊM</button>
+            <button style="border: none;"><i class="fa-solid fa-upload"></i>XUẤT RA FILE<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <button><i class="fa-solid fa-angle-right"></i>Tìm kiếm giao dịch<i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="right-options">
+        <span>Kết quả</span>
+        <select>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="bang_ds">
+            <tr>
+                <th></th>
+                <th>Hành động</th>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Họ đệm</th>
+                <th>Địa chỉ</th>
+                <th>Hoạt động</th>
+            </tr>
+            <tr>
+                <td><i class="fa-regular fa-square-caret-down"></i></td>
+                <td>
+                  <button style="background-color: #58A0C8; border: none;"><i class="fa-solid fa-eye"></i></button>
+                  <button style="background-color: #ECECBB; border: none;"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background-color: #BB6653; border: none;"><i class="fa-solid fa-circle-xmark"></i></button>
+              </td>
+                <td>1</td>
+                <td>Mai</td>
+                <td>Thục Anh</td>
+                <td>23 Hoàng Đạo Thúy,Thanh Xuân,Hà Nội</td>
+                <td>
+                    <div style="padding: 10px; border: 1px dashed #ccc; text-align:left;">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </td> 
+            </tr>
+            <tr>
+                <td><i class="fa-regular fa-square-caret-down"></i></td>
+                 <td>
+              
+                  <button style="background-color: #58A0C8; border: none;"><i class="fa-solid fa-eye"></i></button>
+                  <button style="background-color: #ECECBB; border: none;"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background-color: #BB6653; border: none;"><i class="fa-solid fa-circle-xmark"></i></button>
+              </td>
+                <td>2</td>
+                <td>Hoàng</td>
+                <td>Sinh Hồng</td>
+                <td>23 Hoàng Đạo Thúy,Thanh Xuân,Hà Nội</td>
+                <td>
+                    <div style="padding: 10px; border: 1px dashed #ccc; text-align:left;">
+                        <i class="fa-solid fa-xmark" style="color: #e57373; font-size: 18px;"></i>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fa-regular fa-square-caret-down"></i></td>
+                <td>
+                  <button style="background-color: #58A0C8; border: none;"><i class="fa-solid fa-eye"></i></button>
+                  <button style="background-color: #ECECBB; border: none;"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background-color: #BB6653; border: none;"><i class="fa-solid fa-circle-xmark"></i></button>
+              </td>
+                <td>3</td>
+                <td>Tính</td>
+                <td>Mai Trung</td>
+                <td>1411 Đường láng,Cầu Giấy,Hà Nội</td>
+                <td>
+                    <div style="padding: 10px; border: 1px dashed #ccc; text-align:left;">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+            </tr>
+            <tr>
+                <td><i class="fa-regular fa-square-caret-down"></i></td>
+                <td>
+                  <button style="background-color: #58A0C8; border: none;"><i class="fa-solid fa-eye"></i></button>
+                  <button style="background-color: #ECECBB; border: none;"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background-color: #BB6653; border: none;"><i class="fa-solid fa-circle-xmark"></i></button>
+              </td>
+                <td>4</td>
+                <td>Hồng</td>
+                <td>Nguyễn Văn</td>
+                <td>1411 Đường láng,Cầu Giấy,Hà Nội</td>
+                <td>
+                    <div style="padding: 10px; border: 1px dashed #ccc; text-align:left;">
+                        <i class="fa-solid fa-xmark" style="color: #e57373; font-size: 18px;"></i>
+                    </div>
+                </td>
+                
+            </tr>
+      </table>
+      <hr>
+           <p style="margin-left:1040px;">Kết quả 1 đến 4</p>
+    </div>
+    </div>
+    <div class="footer">
+       <div style="margin-left: 122px;"> 
+        TRƯỜNG ĐẠI HỌC THỦY LỢI<br>
+        Địa chỉ: 175 Tạ Quang Bửu, Hai Bà Trưng, Hà Nội<br>
+        Điện thoại: (024) 38692201 - Fax: (024) 38693351<br>
+        Email: phonghtkt@tlu.edu.vn
+    </div>
+    </div>
+   <div class="modal fade" id="addTransactionModal" tabindex="-1" aria-labelledby="addTransactionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-2">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTransactionModalLabel">Thêm nhân viên</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="addTransactionForm">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label">Tên</label>
+                            <input type="text" class="form-control" name="customer" placeholder="Nhập tên" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Họ đêm</label>
+                            <input type="text" class="form-control" name="employee" placeholder="Nhập tên họ đệm" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Địa chỉ</label>
+                            <input type="text" class="form-control" name="address" placeholder="Nhập địa chỉ" />
+                            <div class="invalid-feedback"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-success">Thêm</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
